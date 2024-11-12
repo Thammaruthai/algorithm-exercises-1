@@ -2,15 +2,28 @@ function runningSum(arr) {
   //Start coding here
   let result = [];
   let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < i + 1; j++) {
-      sum+=arr[j]
+  // for (let i = 0; i < arr.length; i++) {
+  //   for (let j = 0; j < i + 1; j++) {
+  //     sum+=arr[j]
+  //   }
+  //   result.push(sum)
+  //   sum=0;
+  // }
+  // return result
+
+  if (Array.isArray(arr) && arr.length>0) {
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+      console.log(sum);
+      result.push(sum);
+      console.log(result);
     }
-    result.push(sum)
-    sum=0;
+    return result;
   }
-  return result
+
+  else return [];
 }
+
 
 let result1 = runningSum([1, 2, 3, 4]);
 let result2 = runningSum([3, 1, 2, 10, 1]);
